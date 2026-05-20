@@ -160,6 +160,7 @@ const defaultState = {
   chatHistory: [],
 };
 // redeploy test
+// redeploy
 async function loadDB() {
   try {
     const r = localStorage.getItem(STORAGE_KEY);
