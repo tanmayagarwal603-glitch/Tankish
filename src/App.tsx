@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { supabase } from "./supabase-client";
 import type { Profile, Project, ProjectUpdate, ProjectDocument, ProjectPayment, StaffMember, AttendanceRecord, Advance, Task, Property, RentRecord } from "./supabase-client";
 import type { User, Session } from "@supabase/supabase-js";
@@ -1078,6 +1079,7 @@ export default function App() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#F0F2F5", paddingBottom: 72, fontFamily: "Poppins, sans-serif" }}>
+      <Analytics />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       <div style={{ background: "linear-gradient(135deg,#1B3A6B 0%,#0D2547 100%)", padding: "11px 16px", display: "flex", alignItems: "center", justifyContent: "space-between", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
